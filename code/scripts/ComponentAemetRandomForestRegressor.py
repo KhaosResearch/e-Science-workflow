@@ -13,7 +13,7 @@ def execute(pcs: Process, date_column: str, dependent_variable: str):
     """
 
     Name:
-        AEMET Random Forest Control Algorithm
+        Data Control Algorithm
 
     Description:
     Execute standard random forest regression.

@@ -18,7 +18,7 @@ def execute(
     """
 
     Name:
-        AEMET Download
+        Data Download
 
     Description:
         Download meteorological data from AEMET

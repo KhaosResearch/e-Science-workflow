@@ -18,7 +18,7 @@ def execute(
     """
 
     Name:
-        AEMET Stations
+        Data Download
 
     Description:
         Download meteorological data from AEMET for multiple Stations.

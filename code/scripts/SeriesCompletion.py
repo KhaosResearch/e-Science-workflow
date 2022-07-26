@@ -36,7 +36,7 @@ def execute(
 
     """
     Name:
-        Data Series Completion
+        Series Completion
 
     Description:
         Completion of data time series using a linear regression.

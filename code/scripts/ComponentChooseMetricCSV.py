@@ -14,10 +14,10 @@ def execute(pcs: Process,):
     """
 
     Name:
-        Dataset Selection
+        Data Control Selection
 
     Description:
-    Select the best CSV by metrics comparation.
+    Select the best CSV by metrics comparison.
 
     Author:
         Khaos Research Group

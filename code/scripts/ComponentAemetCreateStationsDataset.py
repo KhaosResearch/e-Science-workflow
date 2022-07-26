@@ -11,7 +11,7 @@ def execute(pcs: Process, attribute: str, delimiter: str):
     """
 
     Name:
-        Stations Attribute
+        Attribute Selection
 
     Description:
         Create a CSV File with data about an attribute from Aemet for differents stations
@@ -20,8 +20,8 @@ def execute(pcs: Process, attribute: str, delimiter: str):
         Khaos Research Group
 
     Parameters:
-        attribute (str) -> Attribute name from AEMET..
-        delimiter (str) -> Delimiter for CSV output file..
+        attribute (str) -> Attribute name from AEMET.
+        delimiter (str) -> Delimiter for CSV output file.
 
 
     Mutually Inclusive:
