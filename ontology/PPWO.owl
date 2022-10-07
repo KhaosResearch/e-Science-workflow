@@ -1,0 +1,2755 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologies.khaos.uma.es/pollen#"
+     xml:base="http://www.ontologies.khaos.uma.es/pollen"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bigowl="http://www.ontologies.khaos.uma.es/bigowl/">
+    <owl:Ontology rdf:about="http://www.ontologies.khaos.uma.es/PPWO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/private -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/private"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/PPWO/hasPollen -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/PPWO/hasPollen">
+        <rdfs:domain rdf:resource="http://purl.bioontology.org/ontology/NCBITAXON/71274"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasAlgorithm">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasCellColumn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasCellColumn">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Column"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Cell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasCellRow -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasCellRow">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Row"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Cell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasColumn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasColumn">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Column"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasComponent">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasDataPrimitiveTypeColumn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasDataPrimitiveTypeColumn">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Column"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasDataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasDataType">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasImplementation -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasImplementation">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasParameter">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+        <rdfs:range rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasRow -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasRow">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasTask">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/represents">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Column"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
+        <rdfs:range rdf:resource="http://sweetontology.net/phen/Precipitation"/>
+        <rdfs:range rdf:resource="http://sweetontology.net/phenAtmoWind/Wind"/>
+        <rdfs:range rdf:resource="http://sweetontology.net/propEnergyFlux/Insolation"/>
+        <rdfs:range rdf:resource="http://sweetontology.net/propPressure/AtmosphericPressure"/>
+        <rdfs:range rdf:resource="http://sweetontology.net/propTemperature/Temperature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/specifiesInputClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/specifiesInputClass">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/specifiesOutputClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/specifiesOutputClass">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/PPWO/seasonaly -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/PPWO/seasonaly">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/PPWO/stationary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/PPWO/stationary">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PO_0025281"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/delimiter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/delimiter">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/encoding -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/encoding">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/fileFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/fileFormat">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasDataValue">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasDefaultValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasDefaultValue">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasHeader -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasHeader">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/implementationLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/implementationLanguage">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/lineDelimiter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/lineDelimiter">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/module -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/module">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/numberOfInputs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/numberOfInputs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/numberOfOutputs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/numberOfOutputs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/represents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/represents">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/workflow -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl/workflow">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/NCBITAXON/3499 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/NCBITAXON/3499">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/NCBITAXON/71274"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Center for Biotechnology Information (NCBI) Organismal Classification</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urticaceae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/NCBITAXON/3563 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/NCBITAXON/3563">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/NCBITAXON/71274"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amaranthaceae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/NCBITAXON/4145 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/NCBITAXON/4145">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/NCBITAXON/71274"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Center for Biotechnology Information (NCBI) Organismal Classification</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/NCBITAXON/4402 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/NCBITAXON/4402">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/NCBITAXON/71274"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Center for Biotechnology Information (NCBI) Organismal Classification</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Platanus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/NCBITAXON/71274 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/NCBITAXON/71274">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Center for Biotechnology Information (NCBI) Organismal Classification</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asteridae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PO_0025281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025281">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollen form Plant Ontology</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/opmv/ns#Agent -->
+
+    <owl:Class rdf:about="http://purl.org/net/opmv/ns#Agent"/>
+    
+
+
+    <!-- http://sweetontology.net/phen/Precipitation -->
+
+    <owl:Class rdf:about="http://sweetontology.net/phen/Precipitation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Web for Earth and Environment Technology Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/phenAtmoWind/Wind -->
+
+    <owl:Class rdf:about="http://sweetontology.net/phenAtmoWind/Wind">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Web for Earth and Environment Technology Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/propEnergyFlux/Insolation -->
+
+    <owl:Class rdf:about="http://sweetontology.net/propEnergyFlux/Insolation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Web for Earth and Environment Technology Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/propPressure/AtmosphericPressure -->
+
+    <owl:Class rdf:about="http://sweetontology.net/propPressure/AtmosphericPressure">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Web for Earth and Environment Technology Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/propTemperature/Temperature -->
+
+    <owl:Class rdf:about="http://sweetontology.net/propTemperature/Temperature">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Web for Earth and Environment Technology Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Text"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Algorithm -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Cell -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Cell"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Column -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Column"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Component -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Data -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataCollection -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataCollection">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataCollectionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataCollectionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataFlow -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataFlowAlgorithm -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataFlowAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataIngestion -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataIngestion"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataProcessing -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataSink -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataSink">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataSinkAlgorithm -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataSinkAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataTransform -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/HTML -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/HTML">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Text"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Implementation -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Json -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Json">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Text"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/MachineLearning -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/MachineLearning">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Pdf -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Pdf">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Row -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Row"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/StructuredType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/StructuredType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet">
+        <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Task -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Task"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/TempFile -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/TempFile">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Text -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Text">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Zip -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Zip">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/PPWO#ExcelDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/PPWO#ExcelDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/PPWO#ParameterDatabase -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/PPWO#ParameterDatabase">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database of MongoDB</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Boolean -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Boolean">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Date -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Date">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Double -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Double">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Float -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Float">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Integer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Integer">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/List -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/List">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/StructuredType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/String -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl/String">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmAEMETDownload -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmAEMETDownload">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataCollectionAlgorithm"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm AEMET Download</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm from AEMET Download</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmAEMETStations -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmAEMETStations">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataCollectionAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for AEMET Stations</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm AEMET Stations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmCsvToJson -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmCsvToJson">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for CSV to JSON</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm CSV to JSON</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDataNormalizationPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDataNormalizationPollen">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Data Normalization Pollen</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Data Normalization Pollen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDatasetSelection -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDatasetSelection">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataFlowAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm from Dataset Selection</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Dataset Selection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDatasetStatistics -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDatasetStatistics">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Dataset Statistics</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Dataset Statistics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmExcel2Csv -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmExcel2Csv">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for XLSX to CSV</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm XLSX to CSV</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmImportFileEnbic -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmImportFileEnbic">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataCollectionAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imports a file from an online resource given its url</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Import file</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmInterpolation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm from Interpolation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Interpolation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmJoinDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmJoinDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Join Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Join Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLaggedTimeSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLaggedTimeSeries">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Lagged Time Series</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Lagged Time Series</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmEvaluation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for LSTM Evaluation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm LSTM Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmModel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for LSTM Model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm LSTM Model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmVisualisation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataSinkAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for LSTM Visualisation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm LSTM Visualisation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMeanInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMeanInterpolation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm from Mean Interpolation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Mean Interpolation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMergeCSVs -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMergeCSVs">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for merging CSVs</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Merge CSVs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMergeDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMergeDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm from Merge Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Merge Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmPcaPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmPcaPollen">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for PCA Pollen</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm PCA Pollen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmRandomForestControlAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmRandomForestControlAlgorithm">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Random from Forest Control Algorithm</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Random Forest Control Algorithm</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaEvaluation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for SARIMA Evaluation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm SARIMA Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaModel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for SARIMA Model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm SARIMA Model</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaVisualisation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataSinkAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for SARIMA Visualisation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm SARIMA Visualisation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmScaleByMonths -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmScaleByMonths">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Scale by Months</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Scale by Months</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSeasonality -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSeasonality">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm from Seasonality</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Seasonality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSeriesCompletion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSeriesCompletion">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm that complete the data series</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Series Completion</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitByDatetime -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitByDatetime">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Split by Datetime</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Split by Datetime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Split Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Split Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitSequenceMultivariable -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitSequenceMultivariable">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Split Sequence Multivariable</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Split Sequence Multivariable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmStationsAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmStationsAttribute">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Stations Attibute</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Stations Attibute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmUpdateDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmUpdateDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Update Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Update Dataset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmUploadToDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmUploadToDB">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessingAlgorithm"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm for Upload to DB</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithm Upload to DB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentAEMETDownload -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentAEMETDownload">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataIngestion"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmAEMETDownload"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationAEMETDownload"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetApiKey"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStationCode"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Download meteorological data of a single station from AEMET</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEMET Download</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentAEMETStations -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentAEMETStations">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataCollection"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmAEMETStations"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationAEMETStations"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetApiKey"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAnalysisStations"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Download meteorological data from AEMET for multiple stations</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEMET Stations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentCsvToJson -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentCsvToJson">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmCsvToJson"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationCsvToJson"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convert a CSV file into JSON file</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSV to JSON</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDataNormalizationPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDataNormalizationPollen">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDataNormalizationPollen"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDataNormalizationPollen"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTarget"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Divide the input into two dataframes (features and target) and then they are normalized with MinMaxScaler</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalization</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDataControlSelection -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDataControlSelection">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataFlow"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDatasetSelection"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDatasetSelection"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetMean"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Select the best CSV by metrics comparation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Control Selection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDatasetStatistics -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDatasetStatistics">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmDatasetStatistics"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDatasetStatistics"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAccumulatedAttribute"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterMMAttribute"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Create a CSV file with extra columns based on statistics</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset Statistics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentExcel2Csv -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentExcel2Csv">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmExcel2Csv"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationExcel2Csv"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHeader"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/PPWO#ExcelDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convert xlsx to csv</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XLSX to CSV</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentImportFileExcel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentImportFileExcel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataIngestion"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmImportFileEnbic"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationImportFileEnbic"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterImportFileUrl"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/PPWO#ExcelDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imports a xlsx file from an online resource given its url.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Import file EXCEL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentInterpolation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmInterpolation"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationInterpolation"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInterpolationMethod"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fill Nan values using pandas interpolation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interpolation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentJoinDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentJoinDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmJoinDataset"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationJoinDataset"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHowJoin"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnFirstFile"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnSecondFile"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Join two csv datasets using columns as keys</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Join Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLaggedTimeSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLaggedTimeSeries">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLaggedTimeSeries"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLaggedTimeSeries"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNLag"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Select a portion of the dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lagged Time Series</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmEvaluation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmEvaluation"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmEvaluation"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileFeatures"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileScaler"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Make predictions and evaluate the model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LSTM Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmModel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmModel"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmModel"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNNeurons"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsIn"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileFeatures"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Build a ConvLSTM model for timeseries analysis</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LSTM Model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmVisualisation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataSink"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmLstmVisualisation"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmVisualisation"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/Png"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R2 visualisation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LSTM Visualisation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentMeanInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentMeanInterpolation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMeanInterpolation"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationMeanInterpolation"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterFinalYear"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInitialYear"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fill Nan values using mean interpolation of the values of the same variables in different years of the dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mean Interpolation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentMergeDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentMergeDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmMergeDataset"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationMergeDataset"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Join CSV files by rows if their columns names are the same</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Merge Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentPcaPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentPcaPollen">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmPcaPollen"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationPcaPollen"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PCA analysis to select the most important features</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PCA Pollen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentRandomForestControlAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentRandomForestControlAlgorithm">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/MachineLearning"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmRandomForestControlAlgorithm"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationRandomForestControlAlgorithm"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDependentVariable"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execute standard random forest regression</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Random Forest Control Algorithm</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaEvaluation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaEvaluation"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaEvaluation"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterValidationTime"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Make predictions and evaluate the model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARIMA Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaModel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaModel"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaModel"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterSeasonality"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given a dataframe, it is normalized with MinMaxScaler</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARIMA Model</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaVisualisation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataSink"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaVisualisation"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaVisualisation"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterValidationTime"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/Png"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R2 visualization</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARIMA Visualisation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentScaleByMonths -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentScaleByMonths">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmScaleByMonths"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationScaleByMonths"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given a Pollen Dataframe by days, it is scaled to months</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scale by Months</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSeasonality -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSeasonality">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSeasonality"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSeasonality"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollen"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterYear"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSarimax"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSeasonality"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generate differents plots based on Dickey Fuller and ARIMA methods</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seasonality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSeriesCompletion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSeriesCompletion">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSeriesCompletion"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSeriesCompletion"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAnalysisStations"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCompletionCriteria"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTargetStation"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTests"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetCompleted"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetSeries"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete the data series</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Series Completion</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitByDatetime -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitByDatetime">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitByDatetime"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitByDatetime"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollenColumn"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given dataset and start date/end date, select a portion of this dataset. Date format: &apos;yyyy-mm-dd&apos;</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split by Datetime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataProcessing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitDataset"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitDataset"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAttributeSelection"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split the dataset and return a new one with the columns that you want to keep</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitSequenceMultivariable -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitSequenceMultivariable">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSplitSequenceMultivariable"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitSequenceMultivariable"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsIn"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTarget"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generates supervised data from a multidimensional array. Returns both data and its target for supervised learning</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split Sequence Multivariable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentStationsAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentStationsAttribute">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmStationsAttribute"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationStationsAttribute"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetAttribute"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Create a CSV File with data about an attribute from Aemet for differents stations</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stations Attribute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentUpdateDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentUpdateDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataTransform"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmUpdateDataset"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationUpdateDataset"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColFirstFile"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColSecondFile"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnFirstFile"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnSecondFile"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</bigowl:numberOfInputs>
+        <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfOutputs>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Update a CSV main file using data from another CSV aux file</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Update Dataset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentUploadToDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentUploadToDB">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataSink"/>
+        <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmUploadToDB"/>
+        <bigowl:hasImplementation rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationUploadToDB"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/PPWO#ParameterDatabase"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCollection"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPassword"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPath"/>
+        <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterUser"/>
+        <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile"/>
+        <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
+        <bigowl:workflow rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air</bigowl:workflow>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upload an Aemet JSON file into MongoDB</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upload to DB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Pdf"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSarimax"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSeasonality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File in PDF format</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pdf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSarimax -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSarimax">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSeasonality -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSeasonality">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationAEMETDownload -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationAEMETDownload">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentAemetDownloadData</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of AEMET Download</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation AEMET Download</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationAEMETStations -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationAEMETStations">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentAemetStationWeatherAttributes</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of AEMET Stations</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation AEMET Stations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationCsvToJson -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationCsvToJson">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ComponentCSV2JSON</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of CSV to JSON</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation CSV to JSON</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDataNormalizationPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDataNormalizationPollen">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentDataNormalization</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Data Normalization Pollen</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Data Normalization Pollen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDatasetSelection -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDatasetSelection">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentChooseMetricCSV</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementationof Dataset Selection</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Dataset Selection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDatasetStatistics -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationDatasetStatistics">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentAemetAddStatistics</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Dataset Statistics</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Dataset Statistics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationExcel2Csv -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationExcel2Csv">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ComponentXLSX2CSV</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of XLSX to CSV</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation XLSX to CSV</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationImportFileEnbic -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationImportFileEnbic">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ImportFile</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Import File</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Import File</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationInterpolation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ComponentDataframeInterpolation</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Interpolation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Interpolation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationJoinDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationJoinDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ComponentJoinDataset</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Join Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Join Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLaggedTimeSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLaggedTimeSeries">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentLaggedTimeSeries</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Lagged Time Series</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Lagged Time Series</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmEvaluation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentLSTMEvaluation</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of LSTM Evaluation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation LSTM Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmModel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentLSTMModel</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of LSTM Model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation LSTM Model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationLstmVisualisation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentLSTMVisualisation</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of LSTM Visualisation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation LSTM Visualisation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationMeanInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationMeanInterpolation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentInterpolationMeanColumn</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Mean Interpolation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Mean Interpolation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationMergeDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationMergeDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.JoinCsvByRows</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Merge Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Merge Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationPcaPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationPcaPollen">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentPCAPollen</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of PCA Pollen</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation PCA Pollen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationRandomForestControlAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationRandomForestControlAlgorithm">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentAemetRandomForestRegressor</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Random Forest Control Algorithm</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Random Forest Control Algorithm</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaEvaluation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentSarimaEvaluation</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of SARIMA Evaluation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation SARIMA Evaluation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaModel">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentSARIMA</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of SARIMA Model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation SARIMA Model</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSarimaVisualisation">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentSarimaVisualisation</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of SARIMA Visualisation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation SARIMA Visualisation</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationScaleByMonths -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationScaleByMonths">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentScaleByMonths</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Scale by Months</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Scale by Months</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSeasonality -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSeasonality">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentARIMA</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Seasonality</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Seasonality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSeriesCompletion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSeriesCompletion">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.water.SeriesCompletion</bigowl:module>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Series Completion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Series completion</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitByDatetime -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitByDatetime">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentSplitByDatetime</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Split by Datetime</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Split by Datetime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ComponentSplitDataset</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Split Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Split Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitSequenceMultivariable -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationSplitSequenceMultivariable">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentSplitSequenceMultivariable</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Split Sequence Multivariable</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Split Sequence Multivariable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationStationsAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationStationsAttribute">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentAemetCreateStationsDataset</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Stations Attibute</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Stations Attibute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationUpdateDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationUpdateDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.generic_components.ComponentUpdateDataset</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Update Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Update Dataset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationUploadToDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ImplementationUploadToDB">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Implementation"/>
+        <bigowl:implementationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</bigowl:implementationLanguage>
+        <bigowl:module rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama_enbic2lab.catalog.air.ComponentAemetUploadDB</bigowl:module>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation of Upload to DB</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementation Upload to DB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Json"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAccumulatedAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAccumulatedAttribute">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/List"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acum_list_attr</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List of attributes for perform cumulative amount</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accumulated Attribute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetApiKey -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetApiKey">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aemet_api_key</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Api Key providing by AEMET web page (https://opendata.aemet.es/centrodedescargas/altaUsuario?)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEMET API Key</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetAttribute">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[&quot;tmed&quot;, &quot;tmin&quot;, &quot;tmax&quot;, &quot;dir&quot;, &quot;velmedia&quot;, &quot;racha&quot;, &quot;sol&quot;, &quot;presMax&quot;, &quot;presMin&quot;, &quot;prec&quot;]</bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attribute</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute name from AEMET (tmed, tmin, tmax, dir, velmedia, racha, sol, presMax, presMin, prec)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEMET Attribute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAnalysisStations -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAnalysisStations">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/List"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">analysis_stations</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stations used in the analysis for the completition</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analysis Stations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAttributeSelection -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAttributeSelection">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/List"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attribute_list</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List of attributes that you want to keep in your new dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Selection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColFirstFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColFirstFile">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">col_first_file</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Column of the main file to be updated</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Column First File</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColSecondFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColSecondFile">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">col_second_file</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Column of the aux file used to update de main file</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Column Second File</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCollection -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCollection">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of collection on MongoDB</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCompletionCriteria -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCompletionCriteria">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/List"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[&quot;r2&quot;, &quot;slope&quot;, &quot;pair&quot;]</bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">completion_criteria</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter of prioritization for the completion</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completion Criteria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date_column</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the date&apos;s column</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Column</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">;</bigowl:hasDataValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">delimiter</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates the delimiter of the imported csv file</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">delimiter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDependentVariable -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDependentVariable">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent_variable</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of the dependent variable column of the dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dependent Variable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">end_date</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ending date</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterFinalYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterFinalYear">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">final_year</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final year of the dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final Year</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHeader -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHeader">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Boolean"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[True, False]</bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">header</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicate if the file has header or not</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Header</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHowJoin -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHowJoin">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[&quot;left&quot;, &quot;right&quot;, &quot;outer&quot;, &quot;inner&quot;]</bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">join_how_parameter</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to handle the operation of the two objects. 
+- left: use calling frame’s index (or column if on is specified)
+- right: use other’s index.
+- outer: form union of calling frame’s index (or column if on is specified) with other’s index, and sort it. lexicographically.
+- inner: form intersection of calling frame’s index (or column if on is specified) with other’s index, preserving the order of the calling’s one.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How Join</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterImportFileUrl -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterImportFileUrl">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public accessible resource</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnFirstFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnFirstFile">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">index_column_first_file</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of the column of the first file. This will be use for merge datasets using index column as keys</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Index Column First File</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnSecondFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnSecondFile">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">index_column_second_file</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of the column of the second file. This will be use for merge datasets using index column as keys</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Index Column Second File</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInitialYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInitialYear">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initial_year</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intial year of the dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initial Year</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInterpolationMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInterpolationMethod">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[&quot;None&quot;, &quot;linear&quot;, &quot;time&quot;, &quot;index&quot;, &quot;values&quot;, &quot;nearest&quot;, &quot;zero&quot;, &quot;slinear&quot;, &quot;quadratic&quot;, &quot;cubic&quot;, &quot;barycentric&quot;, &quot;krogh&quot;, &quot;spline&quot;, &quot;polynomial&quot;, &quot;from_derivatives&quot;, &quot;piecewise_polynomial&quot;, &quot;pchip&quot;, &quot;akima&quot;, &quot;cubicspline&quot;]</bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interpolation_method</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset interpolation method. &apos;None&apos; (default value) returns the dataset unchanged. The possible interpolation methods are: &apos;linear&apos;, &apos;time&apos;, &apos;index&apos;, &apos;values&apos;, &apos;nearest&apos;, &apos;zero&apos;, &apos;slinear&apos;, &apos;quadratic&apos;, &apos;cubic&apos;, &apos;barycentric&apos;, &apos;krogh&apos;, &apos;spline&apos;, &apos;polynomial&apos;, &apos;from_derivatives&apos;, &apos;piecewise_polynomial&apos;, &apos;pchip&apos;, &apos;akima&apos;, &apos;cubicspline&apos;. For mor info.: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html&quot;</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interpolation Method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterMMAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterMMAttribute">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/List"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm_list_attr</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List of attributes to perform moving average</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MM Attribute</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNLag -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNLag">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n_lag</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of lags</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Lag</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNNeurons -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNNeurons">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n_neurons</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of neurons for model building</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Neurons</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsIn -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsIn">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n_steps_in</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time window to train the model</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Steps In</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n_steps_out</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Period of time to predict</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Steps Out</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outfile_name</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name without extension of the outfile. Example: for data.csv write data</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outfile Name</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPassword -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPassword">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">password</bigowl:hasName>
+        <bigowl:private rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bigowl:private>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Password of the database</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Password</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPath -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPath">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">path</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Url of MongoDB</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB Path</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollen">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pollen</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A character string with the name of the particle to show. This character must match with the name of a column in the input database. This is a mandatory argument.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollen</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollenColumn -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollenColumn">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pollen_column</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of the pollen column</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollen Column</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterSeasonality -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterSeasonality">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seasonality</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seasonality of the pollen type of the dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seasonality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start_date</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start date</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start Date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStationCode -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStationCode">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">station</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Code of the station from AEMET</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Code</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTargetStation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTargetStation">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target_station</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Target station to complete</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Target Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTests -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTests">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/List"/>
+        <bigowl:hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[&quot;pettit&quot;, &quot;snht&quot;, &quot;buishand&quot;]</bigowl:hasDefaultValue>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tests</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homogeneity tests to perform</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homogeneity Tests</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterUser -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterUser">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterValidationTime -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterValidationTime">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/String"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">validation_time</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicate from which period of time you want to make the validation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Validation Time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ParameterYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterYear">
+        <rdf:type rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <bigowl:hasDataType rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Integer"/>
+        <bigowl:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</bigowl:hasName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An integer value specifying the year to display</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Year</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/Png -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/Png">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Image"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image with Png format</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Png</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetCompleted"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetMean"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetSeries"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simplified version of TabularDataSet.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimpleTabularDataset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetCompleted -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetCompleted">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment>Simplified version of TabularDataset for Completed time series</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simple Tabular Dataset Completed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simplified version of TabularDataset for File two of Join Dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simple Tabular Dataset File Two</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetMean -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetMean">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simplified version of TabularDataset for Mean interpolation dataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimpleTabularDatasetMean</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simplified version of TabularDataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simple Tabular Dataset Prediction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetSeries">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simplified version of TabularDataset for Series Completion Criteria</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimpleTabularDatasetSeries</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTarget -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTarget">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+        <bigowl:delimiter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</bigowl:delimiter>
+        <bigowl:encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utf-8</bigowl:encoding>
+        <bigowl:fileFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csv</bigowl:fileFormat>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simplified version of TabularDataset</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimpleTabularDatasetTest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/TabularDataset -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/TabularDataset">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/TempFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/TempFile">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+        <owl:sameAs rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTwo"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/TempFileFeatures -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileFeatures">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/TempFileScaler -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileScaler">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTwo -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTwo">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
