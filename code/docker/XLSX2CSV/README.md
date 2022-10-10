@@ -24,5 +24,6 @@ docker run -v $(pwd)/data:/usr/local/src/data/ docker.io/enbic2lab/generic/xlsx2
 * --filepath (str) -> Path of the xlsx file.
 * --delimiter (str) -> Delimiter of the csv outfile.
 * --header/ --no-header ->  Has header or not. 
+
 ### Outputs
-* {namefile}.csv
+* filename.csv

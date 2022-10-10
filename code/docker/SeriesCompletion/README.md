@@ -28,9 +28,9 @@ docker run -v $(pwd)/data:/usr/local/src/data/ docker.io/enbic2lab/water/series_
 * --start-date (str) -> First date of the date range, format (yyyy-mm-dd).
 * --end-date (str) -> Last date of the date range, format (yyyy-mm-dd).
 * --target-station (str) -> Target station.
-* --analysis-stations (list) -> List of stations that will be used to complete the target station.
-* --completion-criteria (list) -> List of criteria that will be used to complete the target station. Values that can be included in the list are 'r2','slope','pair'.
-* --tests (list) -> Homogeneity tests. Values that can be included in the list are 'pettit','snht','buishand'.
+* --analysis-stations (List[str]) -> List of stations that will be used to complete the target station.
+* --completion-criteria (List[str]) -> List of criteria that will be used to complete the target station. Values that can be included in the list are 'r2','slope','pair'.
+* --tests (List[str]) -> Homogeneity tests. Values that can be included in the list are 'pettit','snht','buishand'.
 * --delimiter (str) -> Delimiter of the input file and output file. Must be the same
 
 ### Outputs
