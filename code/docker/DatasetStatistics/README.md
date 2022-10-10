@@ -22,11 +22,11 @@ docker run -v $(pwd)/data:/usr/local/src/data/ docker.io/enbic2lab/air/aemet_add
 ```
 
 ### Parameters
-* filepath (str) --> File path of the CSV File.
-* acum-list-attr (List[str]) --> List of attributes for doing statistics with them.
-* mm_list_attr (List[str]) --> List of attributes for mm statistic. 
-* delimiter (str) --> Delimiter of the CSV File.
-* outfile_name (str) --> Name of the output CSV file without extension.
+* --filepath (str) -> File path of the CSV File.
+* --acum-list-attr (List[str]) -> List of attributes for doing statistics with them.
+* --mm-list-attr (List[str]) -> List of attributes for mm statistic. 
+* --delimiter (str) -> Delimiter of the CSV File.
+* --outfile-name (str) -> Name of the output CSV file without extension.
 
 ### Outputs
-* outfile_name.csv
+* {outfile-name}.csv
