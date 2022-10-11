@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 22 15:47:03 2022
-@author: sandro
-"""
-
 import os
 from itertools import product
 from pathlib import Path

@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 23 15:21:45 2022
-
-@author: sandro
-"""
-
 import math
 import os
 from pathlib import Path

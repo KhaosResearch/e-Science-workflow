@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 23 15:46:33 2022
-
-@author: sandro
-"""
 import os
 from pathlib import Path
 
