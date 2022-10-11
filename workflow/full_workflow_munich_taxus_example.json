@@ -1,0 +1,2846 @@
+{
+  "operators": {
+    "0": {
+      "properties": {
+        "name": "ComponentAEMETDownload1",
+        "label": "AEMET Download",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetDownloadData"
+          }
+        ],
+        "inputs": {},
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Download meteorological data of a single station from AEMET",
+        "numberofinputs": 0,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentAEMETDownload"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "end_date",
+            "label": "End Date",
+            "value": "2015-12-31",
+            "defaultValue": ""
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "start_date",
+            "label": "Start Date",
+            "value": "2010-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "delimiter",
+            "label": "delimiter",
+            "value": ";",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "aemet_api_key",
+            "label": "AEMET API Key",
+            "value": "",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetApiKey",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "station",
+            "label": "Station Code",
+            "value": "6155A",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStationCode",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 20,
+      "top": 260
+    },
+    "1": {
+      "properties": {
+        "name": "ComponentAEMETStations1",
+        "label": "AEMET Stations",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetStationWeatherAttributes"
+          }
+        ],
+        "inputs": {},
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "JSONFile",
+              "label": "JSON"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Json"
+            }
+          }
+        },
+        "description": "Download meteorological data from AEMET for multiple stations",
+        "numberofinputs": 0,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentAEMETStations"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "end_date",
+            "label": "End Date",
+            "value": "2015-12-31",
+            "defaultValue": ""
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "analysis_stations",
+            "label": "Analysis Stations",
+            "value": "6155A,6172O,6156X",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAnalysisStations",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "start_date",
+            "label": "Start Date",
+            "value": "2010-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "aemet_api_key",
+            "label": "AEMET API Key",
+            "value": "",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetApiKey",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 20,
+      "top": 380
+    },
+    "2": {
+      "properties": {
+        "name": "ComponentImportFileExcel1",
+        "label": "Import File EXCEL",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ImportFile"
+          }
+        ],
+        "inputs": {},
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "ExcelDataset",
+              "label": "XLSX"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ExcelDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Imports a xlsx file from an online resource given its url",
+        "numberofinputs": 0,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentImportFileExcel"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "url",
+            "label": "url",
+            "value": "minio://enbic2lab-test/demo/air-workflow/munich_taxus_doy.xlsx",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterImportFileUrl",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 180,
+      "top": 80
+    },
+    "3": {
+      "properties": {
+        "name": "ComponentJoinDataset1",
+        "label": "Join Dataset",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ComponentJoinDataset"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDatasetFileTwo",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Join two csv datasets using columns as keys",
+        "numberofinputs": 2,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentJoinDataset"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "join_how_parameter",
+            "label": "How Join",
+            "value": "left",
+            "defaultValue": "[\"left\", \"right\", \"outer\", \"inner\"]"
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHowJoin",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "delimiter",
+            "label": "delimiter",
+            "value": ";",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "index_column_first_file",
+            "label": "Index Column First File",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnFirstFile",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "index_column_second_file",
+            "label": "Index Column Second File",
+            "value": "date",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnSecondFile",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_data",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 180,
+      "top": 260
+    },
+    "4": {
+      "properties": {
+        "name": "ComponentExcel2Csv1",
+        "label": "XLSX to CSV",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ComponentXLSX2CSV"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "ExcelDataset",
+              "label": "XLSX"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ExcelDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Convert xlsx to csv",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentExcel2Csv"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "header",
+            "label": "Header",
+            "value": "True",
+            "defaultValue": "[True, False]"
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterHeader",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Boolean"
+          }
+        },
+        {
+          "properties": {
+            "name": "delimiter",
+            "label": "delimiter",
+            "value": ";",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 180,
+      "top": 180
+    },
+    "5": {
+      "properties": {
+        "name": "ComponentStationsAttribute1",
+        "label": "Stations Attribute",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetCreateStationsDataset"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "JSONFile",
+              "label": "JSON"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Json"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Create a CSV File with data about an attribute from Aemet for differents stations",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentStationsAttribute"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "attribute",
+            "label": "AEMET Attribute",
+            "value": "prec",
+            "defaultValue": "[\"tmed\", \"tmin\", \"tmax\", \"dir\", \"velmedia\", \"racha\", \"sol\", \"presMax\", \"presMin\", \"prec\"]"
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAemetAttribute",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "delimiter",
+            "label": "delimiter",
+            "value": ";",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDelimiter",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 180,
+      "top": 380
+    },
+    "6": {
+      "properties": {
+        "name": "ComponentSeriesCompletion1",
+        "label": "Series Completion",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.water.SeriesCompletion"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDatasetCompleted",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetCompleted",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_2": {
+            "properties": {
+              "name": "SimpleTabularDatasetSeries",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetSeries",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_3": {
+            "properties": {
+              "name": "SimpleTabularDatasetTest",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Complete the data series",
+        "numberofinputs": 1,
+        "numberofoutputs": 4
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSeriesCompletion"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "end_date",
+            "label": "End Date",
+            "value": "2015-12-31",
+            "defaultValue": ""
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "tests",
+            "label": "Homogeneity Tests",
+            "value": "pettit,snht,buishand",
+            "defaultValue": "[\"pettit\", \"snht\", \"buishand\"]"
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTests",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "completion_criteria",
+            "label": "Completion Criteria",
+            "value": "r2",
+            "defaultValue": "[\"r2\", \"slope\", \"intercept\", \"pair\"]"
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCompletionCriteria",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "analysis_stations",
+            "label": "Analysis Stations",
+            "value": "6172O,6156X",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAnalysisStations",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "start_date",
+            "label": "Start Date",
+            "value": "2010-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "target_station",
+            "label": "Target Station",
+            "value": "6155A",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterTargetStation",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 340,
+      "top": 380
+    },
+    "7": {
+      "properties": {
+        "name": "ComponentUpdateDataset1",
+        "label": "Update Dataset",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ComponentUpdateDataset"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDatasetFileTwo",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Update a CSV main file using data from another CSV aux file",
+        "numberofinputs": 2,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentUpdateDataset"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "col_first_file",
+            "label": "Column First File",
+            "value": "prec",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColFirstFile",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "col_second_file",
+            "label": "Column Second File",
+            "value": "6155A",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterColSecondFile",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "index_column_first_file",
+            "label": "Index Column First File",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnFirstFile",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "index_column_second_file",
+            "label": "Index Column Second File",
+            "value": "DATE",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterIndexColumnSecondFile",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_meteo_taxus_data_updated",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 500,
+      "top": 260
+    },
+    "8": {
+      "properties": {
+        "name": "ComponentMeanInterpolation1",
+        "label": "Mean Interpolation",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentInterpolationMeanColumn"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Fill Nan values using mean interpolation of the values of the same variables in different years of the dataset",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentMeanInterpolation"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "final_year",
+            "label": "Final Year",
+            "value": "2015",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterFinalYear",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        },
+        {
+          "properties": {
+            "name": "initial_year",
+            "label": "Initial Year",
+            "value": "2010",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInitialYear",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        },
+        {
+          "properties": {
+            "name": "date_column",
+            "label": "Date Column",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_meteo_taxus_data_updated_mean_interpolation",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 600,
+      "top": 100
+    },
+    "9": {
+      "properties": {
+        "name": "ComponentInterpolation1",
+        "label": "Interpolation",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ComponentDataframeInterpolation"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Fill Nan values using pandas interpolation",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentInterpolation"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "interpolation_method",
+            "label": "Interpolation Method",
+            "value": "None",
+            "defaultValue": "[\"None\", \"linear\", \"time\", \"index\", \"values\", \"nearest\", \"zero\", \"slinear\", \"quadratic\", \"cubic\", \"barycentric\", \"krogh\", \"spline\", \"polynomial\", \"from_derivatives\", \"piecewise_polynomial\", \"pchip\", \"akima\", \"cubicspline\"]"
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterInterpolationMethod",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 600,
+      "top": 440
+    },
+    "10": {
+      "properties": {
+        "name": "ComponentSplitDataset1",
+        "label": "Split Dataset",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ComponentSplitDataset"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Split the dataset and return a new one with the columns that you want to keep",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitDataset"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "attribute_list",
+            "label": "Attribute Selection",
+            "value": "fecha,tmed,prec,tmin,tmax,dir,velmedia,racha,sol,presMax,presMin,DOY,Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAttributeSelection",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_meteo_taxus_data_split",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 340,
+      "top": 260
+    },
+    "11": {
+      "properties": {
+        "name": "ComponentDatasetStatistics1",
+        "label": "Dataset Statistics",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetAddStatistics"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Create a CSV file with extra columns based on statistics",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDatasetStatistics"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "acum_list_attr",
+            "label": "Accumulated Attribute",
+            "value": "prec,tmed,tmax,tmin,sol,presMax,presMin,Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAccumulatedAttribute",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "mm_list_attr",
+            "label": "MM Attribute",
+            "value": "prec,tmin,tmax,dir,velmedia,racha,sol,presMax,presMin,Taxus,tmed",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterMMAttribute",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_meteo_alnus_data_updated_mean_interpolation_statistics",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 740,
+      "top": 100
+    },
+    "12": {
+      "properties": {
+        "name": "ComponentDatasetStatistics3",
+        "label": "Dataset Statistics",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetAddStatistics"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Create a CSV file with extra columns based on statistics",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDatasetStatistics"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "acum_list_attr",
+            "label": "Accumulated Attribute",
+            "value": "prec,tmed,tmax,tmin,sol,presMax,presMin,Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterAccumulatedAttribute",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "mm_list_attr",
+            "label": "MM Attribute",
+            "value": "prec,tmin,tmax,dir,velmedia,racha,sol,presMax,presMin,Taxus,tmed",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterMMAttribute",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/List"
+          }
+        },
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_meteo_taxus_data_updated_statistics",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 740,
+      "top": 440
+    },
+    "13": {
+      "properties": {
+        "name": "ComponentRandomForestControlAlgorithm1",
+        "label": "Random Forest Control Algorithm",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetRandomForestRegressor"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Execute standard random forest regression",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentRandomForestControlAlgorithm"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "dependent_variable",
+            "label": "Dependent Variable",
+            "value": "Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDependentVariable",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "date_column",
+            "label": "Date Column",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 740,
+      "top": 180
+    },
+    "14": {
+      "properties": {
+        "name": "ComponentRandomForestControlAlgorithm3",
+        "label": "Random Forest Control Algorithm",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetRandomForestRegressor"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Execute standard random forest regression",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentRandomForestControlAlgorithm"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "dependent_variable",
+            "label": "Dependent Variable",
+            "value": "Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDependentVariable",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "date_column",
+            "label": "Date Column",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 740,
+      "top": 360
+    },
+    "15": {
+      "properties": {
+        "name": "ComponentMergeDataset1",
+        "label": "Merge Dataset",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.JoinCsvByRows"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDatasetFileTwo",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetFileTwo",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Join CSV files by rows if their columns names are the same",
+        "numberofinputs": 2,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentMergeDataset"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "outfile_name",
+            "label": "Outfile Name",
+            "value": "6155A_aemet_pollen_meteo_taxus_metrics",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterOutfileName",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 740,
+      "top": 260
+    },
+    "16": {
+      "properties": {
+        "name": "ComponentCsvToJson1",
+        "label": "CSV to JSON",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.generic_components.ComponentCSV2JSON"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "JSONFile",
+              "label": "JSON"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Json"
+            }
+          }
+        },
+        "description": "Convert a CSV file into JSON file",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentCsvToJson"
+      },
+      "parameters": [],
+      "ontology_mapping": {},
+      "left": 1060,
+      "top": 260
+    },
+    "17": {
+      "properties": {
+        "name": "ComponentUploadToDB1",
+        "label": "Upload to DB",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentAemetUploadDB"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "JSONFile",
+              "label": "JSON"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/JSONFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Json"
+            }
+          }
+        },
+        "outputs": {},
+        "description": "Upload an Aemet JSON file into MongoDB",
+        "numberofinputs": 1,
+        "numberofoutputs": 0
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentUploadToDB"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "password",
+            "label": "Password",
+            "value": "",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPassword",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "user",
+            "label": "User",
+            "value": "",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterUser",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "collection",
+            "label": "Collection",
+            "value": "pollen_dataset",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterCollection",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "path",
+            "label": "DB Path",
+            "value": "mongodb://111.111.111.1:11111/",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPath",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "database",
+            "label": "Database",
+            "value": "pollen",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDatabase",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 1200,
+      "top": 260
+    },
+    "18": {
+      "properties": {
+        "name": "ComponentDataControlSelection1",
+        "label": "Data Control Selection",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentChooseMetricCSV"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDatasetMean",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetMean",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "2": {
+            "properties": {
+              "name": "SimpleTabularDatasetTest",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Select the best CSV by metrics comparation",
+        "numberofinputs": 3,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDataControlSelection"
+      },
+      "parameters": [],
+      "ontology_mapping": {},
+      "left": 920,
+      "top": 260
+    },
+    "19": {
+      "properties": {
+        "name": "ComponentScaleByMonths1",
+        "label": "Scale by Months",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentScaleByMonths"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Given a Pollen Dataframe by days, it is scaled to months",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentScaleByMonths"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "date_column",
+            "label": "Date Column",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 40,
+      "top": 800
+    },
+    "20": {
+      "properties": {
+        "name": "ComponentSplitByDatetime1",
+        "label": "Split by Datetime",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentSplitByDatetime"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "FilePdf",
+              "label": "PDF"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Pdf"
+            }
+          }
+        },
+        "description": "Given dataset and start date/end date, select a portion of this dataset. Date format: 'yyyy-mm-dd'",
+        "numberofinputs": 1,
+        "numberofoutputs": 2
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitByDatetime"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "end_date",
+            "label": "End Date",
+            "value": "2015-12-31",
+            "defaultValue": ""
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterEndDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "start_date",
+            "label": "Start Date",
+            "value": "2010-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "pollen_column",
+            "label": "Pollen Column",
+            "value": "Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollenColumn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 180,
+      "top": 800
+    },
+    "21": {
+      "properties": {
+        "name": "ComponentLaggedTimeSeries1",
+        "label": "Lagged Time Series",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentLaggedTimeSeries"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Select a portion of the dataset",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLaggedTimeSeries"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "n_lag",
+            "label": "N Lag",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNLag",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 260,
+      "top": 940
+    },
+    "22": {
+      "properties": {
+        "name": "ComponentPcaPollen1",
+        "label": "PCA Pollen",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentPCAPollen"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "PCA analysis to select the most important features",
+        "numberofinputs": 1,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentPcaPollen"
+      },
+      "parameters": [],
+      "ontology_mapping": {},
+      "left": 400,
+      "top": 940
+    },
+    "23": {
+      "properties": {
+        "name": "ComponentDataNormalizationPollen1",
+        "label": "Normalization",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentDataNormalization"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "TempFile",
+              "label": "PKL"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          },
+          "output_2": {
+            "properties": {
+              "name": "SimpleTabularDatasetTarget",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTarget",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_3": {
+            "properties": {
+              "name": "TempFileTarget",
+              "label": "PKL"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "description": "Divide the input into two dataframes (features and target) and then they are normalized with MinMaxScaler",
+        "numberofinputs": 1,
+        "numberofoutputs": 4
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentDataNormalizationPollen"
+      },
+      "parameters": [],
+      "ontology_mapping": {},
+      "left": 540,
+      "top": 940
+    },
+    "24": {
+      "properties": {
+        "name": "ComponentSplitSequenceMultivariable1",
+        "label": "Split Sequence Multivariable",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentSplitSequenceMultivariable"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDatasetTarget",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTarget",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "TempFile",
+              "label": "NPY"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "description": "Generates supervised data from a multidimensional array. Returns both data and its target for supervised learning",
+        "numberofinputs": 2,
+        "numberofoutputs": 2
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSplitSequenceMultivariable"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "n_steps_in",
+            "label": "N Steps In",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsIn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        },
+        {
+          "properties": {
+            "name": "n_steps_out",
+            "label": "N Steps Out",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 700,
+      "top": 920
+    },
+    "25": {
+      "properties": {
+        "name": "ComponentLstmModel1",
+        "label": "LSTM Model",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentLSTMModel"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "TempFile",
+              "label": "NPY"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "TempFile",
+              "label": "H5"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "TempFileFeatures",
+              "label": "NPY"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFileFeatures",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          },
+          "output_2": {
+            "properties": {
+              "name": "TempFileTarget",
+              "label": "NPY"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "description": "Build a ConvLSTM model for timeseries analysis",
+        "numberofinputs": 2,
+        "numberofoutputs": 3
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmModel"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "n_neurons",
+            "label": "N Neurons",
+            "value": "200",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNNeurons",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        },
+        {
+          "properties": {
+            "name": "n_steps_in",
+            "label": "N Steps In",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsIn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        },
+        {
+          "properties": {
+            "name": "n_steps_out",
+            "label": "N Steps Out",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 840,
+      "top": 920
+    },
+    "26": {
+      "properties": {
+        "name": "ComponentLstmEvaluation1",
+        "label": "LSTM Evaluation",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentLSTMEvaluation"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "TempFile",
+              "label": "H5"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "TempFileFeatures",
+              "label": "NPY"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFileFeatures",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          },
+          "2": {
+            "properties": {
+              "name": "TempFileScaler",
+              "label": "PKL"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFileScaler",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          },
+          "3": {
+            "properties": {
+              "name": "TempFileTarget",
+              "label": "NPY"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFileTarget",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDatasetPrediction",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Make predictions and evaluate the model",
+        "numberofinputs": 4,
+        "numberofoutputs": 2
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmEvaluation"
+      },
+      "parameters": [],
+      "ontology_mapping": {},
+      "left": 1020,
+      "top": 960
+    },
+    "27": {
+      "properties": {
+        "name": "ComponentLstmVisualisation1",
+        "label": "LSTM Visualisation",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentLSTMVisualisation"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDatasetPrediction",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "Png",
+              "label": "PNG"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/Png",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Image"
+            }
+          }
+        },
+        "description": "R2 visualisation",
+        "numberofinputs": 2,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentLstmVisualisation"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "start_date",
+            "label": "Start Date",
+            "value": "2010-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterStartDate",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "n_steps_out",
+            "label": "N Steps Out",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterNStepsOut",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 1020,
+      "top": 780
+    },
+    "28": {
+      "properties": {
+        "name": "ComponentSarimaModel1",
+        "label": "SARIMA Model",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentSARIMA"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "SimpleTabularDatasetTest",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_2": {
+            "properties": {
+              "name": "TempFile",
+              "label": "PKL"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "description": "Given a dataframe, it is normalized with MinMaxScaler",
+        "numberofinputs": 1,
+        "numberofoutputs": 3
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaModel"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "seasonality",
+            "label": "Seasonality",
+            "value": "12",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterSeasonality",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 340,
+      "top": 680
+    },
+    "29": {
+      "properties": {
+        "name": "ComponentSarimaVisualisation1",
+        "label": "SARIMA Visualisation",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentSarimaVisualisation"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDatasetPrediction",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDatasetTest",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "Png",
+              "label": "PNG"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/Png",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Image"
+            }
+          }
+        },
+        "description": "R2 visualization",
+        "numberofinputs": 2,
+        "numberofoutputs": 1
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaVisualisation"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "validation_time",
+            "label": "Validation Time",
+            "value": "2013-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterValidationTime",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 700,
+      "top": 680
+    },
+    "30": {
+      "properties": {
+        "name": "ComponentSarimaEvaluation1",
+        "label": "SARIMA Evaluation",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentSarimaEvaluation"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "1": {
+            "properties": {
+              "name": "SimpleTabularDatasetTest",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetTest",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "2": {
+            "properties": {
+              "name": "TempFile",
+              "label": "PKL"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/TempFile",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Data"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "SimpleTabularDatasetPrediction",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDatasetPrediction",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "description": "Make predictions and evaluate the model",
+        "numberofinputs": 3,
+        "numberofoutputs": 2
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaEvaluation"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "validation_time",
+            "label": "Validation Time",
+            "value": "2013-01-01",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterValidationTime",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 540,
+      "top": 620
+    }
+  },
+  "links": {
+    "0": {
+      "fromOperator": "0",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "3",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "1": {
+      "fromOperator": "1",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "5",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "2": {
+      "fromOperator": "5",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "6",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "3": {
+      "fromOperator": "6",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "7",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "4": {
+      "fromOperator": "7",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "8",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "5": {
+      "fromOperator": "7",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "9",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "6": {
+      "fromOperator": "3",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "10",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "7": {
+      "fromOperator": "10",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "7",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "8": {
+      "fromOperator": "8",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "11",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "9": {
+      "fromOperator": "9",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "12",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "10": {
+      "fromOperator": "11",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "13",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "11": {
+      "fromOperator": "12",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "14",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "12": {
+      "fromOperator": "14",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "15",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "13": {
+      "fromOperator": "13",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "15",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "14": {
+      "fromOperator": "11",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "18",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "15": {
+      "fromOperator": "12",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "18",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "16": {
+      "fromOperator": "15",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "18",
+      "toConnector": "2",
+      "toSubConnector": 0
+    },
+    "17": {
+      "fromOperator": "18",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "16",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "18": {
+      "fromOperator": "16",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "17",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "19": {
+      "fromOperator": "2",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "4",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "20": {
+      "fromOperator": "4",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "3",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "21": {
+      "fromOperator": "18",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "19",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "22": {
+      "fromOperator": "19",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "20",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "23": {
+      "fromOperator": "20",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "21",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "24": {
+      "fromOperator": "21",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "22",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "25": {
+      "fromOperator": "22",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "23",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "26": {
+      "fromOperator": "23",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "24",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "27": {
+      "fromOperator": "23",
+      "fromConnector": "output_2",
+      "fromSubConnector": 0,
+      "toOperator": "24",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "28": {
+      "fromOperator": "24",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "25",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "29": {
+      "fromOperator": "24",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "25",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "30": {
+      "fromOperator": "25",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "26",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "31": {
+      "fromOperator": "25",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "26",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "32": {
+      "fromOperator": "25",
+      "fromConnector": "output_2",
+      "fromSubConnector": 0,
+      "toOperator": "26",
+      "toConnector": "3",
+      "toSubConnector": 0
+    },
+    "33": {
+      "fromOperator": "23",
+      "fromConnector": "output_3",
+      "fromSubConnector": 0,
+      "toOperator": "26",
+      "toConnector": "2",
+      "toSubConnector": 0
+    },
+    "34": {
+      "fromOperator": "20",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "27",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "35": {
+      "fromOperator": "26",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "27",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "36": {
+      "fromOperator": "20",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "28",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "37": {
+      "fromOperator": "28",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "30",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "38": {
+      "fromOperator": "28",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "30",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "39": {
+      "fromOperator": "28",
+      "fromConnector": "output_2",
+      "fromSubConnector": 0,
+      "toOperator": "30",
+      "toConnector": "2",
+      "toSubConnector": 0
+    },
+    "40": {
+      "fromOperator": "28",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "29",
+      "toConnector": "1",
+      "toSubConnector": 0
+    },
+    "41": {
+      "fromOperator": "30",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": "29",
+      "toConnector": "0",
+      "toSubConnector": 0
+    }
+  }
+}
