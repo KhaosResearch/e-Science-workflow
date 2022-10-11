@@ -3,11 +3,11 @@ from pathlib import Path
 from typing import Optional
 from urllib.parse import urlparse
 
-from drama.core.model import TempFile, CompressedFile, SimpleTabularDataset
-from drama_enbic2lab.model import XMLFile, ExcelDataset, SavFile
+from drama.core.model import CompressedFile, SimpleTabularDataset, TempFile
 from drama.models.task import TaskResult
 from drama.process import Process
 from drama.storage.base import NotValidScheme
+from drama_enbic2lab.model import ExcelDataset, JSONFile, SavFile, XMLFile
 
 
 def execute(
@@ -20,13 +20,13 @@ def execute(
     """
     Name:
         Import File
-    
+
     Description:
-    Imports a file from an online resource given its url.
-    
+        Imports a file from an online resource given its url.
+
     Args:
         pcs (Process)
-    
+
     Parameters:
         url (str): Public accessible resource. It can be a URI or a url.
         parameters (str): GET parameters to append to url.

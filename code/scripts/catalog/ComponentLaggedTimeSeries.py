@@ -1,7 +1,5 @@
-import os
 import shutil
 from pathlib import Path
-from typing import List
 
 import docker
 from drama.core.model import SimpleTabularDataset
@@ -9,32 +7,32 @@ from drama.models.task import TaskResult
 from drama.process import Process
 
 
-def execute(pcs: Process, interpolation_method: str = "linear"):
-    """
+def execute(pcs: Process, n_lag: int):
+    f"""
 
     Name:
-        Interpolation
+        Lagged Time-Series generation
 
     Description:
-    Fill Nan values using pandas interpolation.
+        Given a pandas dataset and start date/end date, select a portion of this dataset
 
     Author:
         Khaos Research Group
 
     Parameters:
-        interpolation_method (str) --> Interpolation technique to use. For mor info see https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html
+        * --n_lag (int) -> Select number of lags
 
     Mutually Inclusive:
         None
 
     Inputs:
-        SimpleTabularDataset: A CSV file with all the data processed.
+        SimpleTabularDataset: A CSV file with a portion of the original pollen dataset.
 
     Outputs:
-        SimpleTabularDataset: A CSV file with the data interpolated.
+       SimpleTabularDataset: A CSV with a a lagged dataframe.
 
     Outfiles:
-        filename.csv
+        lagged_dataset.csv
 
     """
 
@@ -54,13 +52,13 @@ def execute(pcs: Process, interpolation_method: str = "linear"):
         shutil.copyfile(local_file_path, in_csv)
 
     # Docker
-    image_name = "enbic2lab/generic/dataframe_interpolation"
+    image_name = "enbic2lab/air/lagged_time_series"
     # get docker image
     client = docker.from_env()
     container = client.containers.run(
         image=image_name,
         volumes={local_component_path: {"bind": "/usr/local/src/data", "mode": "rw"}},
-        command=f"--filepath '{local_file_path.name}' --delimiter '{input_file_delimiter}' --interpolation-method '{interpolation_method}'",
+        command=f"--filepath  '{local_file_path.name}' --n-lag {n_lag} --delimiter '{input_file_delimiter}' ",
         detach=True,
         tty=True,
     )
@@ -74,10 +72,7 @@ def execute(pcs: Process, interpolation_method: str = "linear"):
     container.remove(v=True)
 
     # Outputs
-    outfile_name = (
-        os.path.splitext(local_file_path.name)[0] + "_" + interpolation_method
-    )
-    out_csv = Path(pcs.storage.local_dir, outfile_name).with_suffix(".csv")
+    out_csv = Path(pcs.storage.local_dir, "lagged_dataset.csv")
     # send time to remote storage
     if not out_csv.is_file():
         raise FileNotFoundError(f"{out_csv} is missing")

@@ -2,9 +2,9 @@ import shutil
 from pathlib import Path
 
 import docker
+from drama.core.model import SimpleTabularDataset
 from drama.models.task import TaskResult
 from drama.process import Process
-from drama.core.model import SimpleTabularDataset
 
 
 def execute(pcs: Process, attribute: str, delimiter: str):

@@ -20,7 +20,9 @@ class _Settings(BaseSettings):
     MONGO_DATABASE: str = None
     MONGO_COLLECTION: str = None
 
-    DATA_DIR: str = str(Path("/tmp" if platform.system() == "Darwin" else tempfile.gettempdir()))
+    DATA_DIR: str = str(
+        Path("/tmp" if platform.system() == "Darwin" else tempfile.gettempdir())
+    )
 
     class Config:
         env_file = ".env"

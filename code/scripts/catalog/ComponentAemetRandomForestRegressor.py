@@ -1,12 +1,11 @@
 import shutil
 from pathlib import Path
+from typing import List
 
 import docker
+from drama.core.model import SimpleTabularDataset
 from drama.models.task import TaskResult
 from drama.process import Process
-from drama.core.model import SimpleTabularDataset
-
-from typing import List
 
 
 def execute(pcs: Process, date_column: str, dependent_variable: str):

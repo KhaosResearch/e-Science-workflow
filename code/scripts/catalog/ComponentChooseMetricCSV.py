@@ -1,16 +1,19 @@
+import fnmatch
 import glob
-import shutil
-from pathlib import Path
 import os
 import re
+import shutil
+from pathlib import Path
+
 import docker
-import fnmatch
+from drama.core.model import SimpleTabularDataset
 from drama.models.task import TaskResult
 from drama.process import Process
-from drama.core.model import SimpleTabularDataset
 
 
-def execute(pcs: Process,):
+def execute(
+    pcs: Process,
+):
     """
 
     Name:

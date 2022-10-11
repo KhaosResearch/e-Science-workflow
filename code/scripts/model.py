@@ -1,13 +1,8 @@
 from dataclasses import dataclass
 
 from drama.core.model import _BaseSimpleTabularDataset
-from drama.datatype import (
-    DataType,
-    is_integer,
-    is_string,
-    is_float,
-    is_boolean,
-)
+from drama.datatype import (DataType, is_boolean, is_float, is_integer,
+                            is_string)
 
 
 @dataclass
@@ -35,9 +30,11 @@ class CompressFile(DataType):
 class Pdf(DataType):
     resource: str = is_string()
 
+
 @dataclass
 class SavFile(DataType):
     resource: str = is_string()
+
 
 @dataclass
 class XMLFile(DataType):
@@ -48,6 +45,7 @@ class XMLFile(DataType):
 class JSONFile(DataType):
     resource: str = is_string()
 
+
 @dataclass
-class GEOJSONFile (DataType):
+class GEOJSONFile(DataType):
     resource: str = is_string()

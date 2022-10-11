@@ -1,44 +1,46 @@
 import shutil
 from pathlib import Path
-from typing import List
 
 import docker
 from drama.core.model import SimpleTabularDataset
 from drama.models.task import TaskResult
 from drama.process import Process
+from drama_enbic2lab.model import Pdf
 
 
-def execute(pcs: Process, outfile_name: str, attribute_list: List[str]):
+def execute(pcs: Process, start_date: str, end_date: str, pollen_column: str):
     f"""
 
     Name:
-        Split Dataset
+        Split By Datetime
 
     Description:
-        Split the dataset and return another with the columns that you want to keep.
+        Given a pandas dataset and start date/end date, select a portion of this dataset
 
     Author:
         Khaos Research Group
 
     Parameters:
-        outfile_name (str) --> Name of the output file without extensions.
-        attribute_list (str) --> List of attributes that you want to keep.
+        * --start_date (str) -> Select start date to split the dataset
+        * --end_date (str) -> Select end date to split the dataset
+        * --pollen_column (str) -> Name of the date column
 
     Mutually Inclusive:
         None
 
     Inputs:
-        SimpleTabularDataset: A CSV file.
+        SimpleTabularDataset: A CSV file with the dataset scaled by months.
 
     Outputs:
-       SimpleTabularDataset: A CSV file with the columns attributes selected.
+       SimpleTabularDataset: A CSV with a portion of the original dataset.
+       Pdf: A pdf file that plots the pollen data.
 
     Outfiles:
-        'outfile_name'.csv
+        split_dataset.csv
 
     """
 
-    # read inputs
+    # Inputs
     inputs = pcs.get_from_upstream()
 
     input_file = inputs["SimpleTabularDataset"][0]
@@ -53,20 +55,15 @@ def execute(pcs: Process, outfile_name: str, attribute_list: List[str]):
     if not in_csv.is_file():
         shutil.copyfile(local_file_path, in_csv)
 
-    attribute_params = " ".join(
-        f'--attribute-list "{attribute}"' for attribute in attribute_list
-    )
-
     # Docker
-    image_name = "enbic2lab/generic/split_dataset"
-
+    image_name = "enbic2lab/air/split_by_datetime"
     # get docker image
     client = docker.from_env()
     container = client.containers.run(
         image=image_name,
         volumes={local_component_path: {"bind": "/usr/local/src/data", "mode": "rw"}},
-        command=f"--filepath  {local_file_path.name} --delimiter {input_file_delimiter} "
-        f"--outfile-name {outfile_name} {attribute_params} ",
+        command=f"--filepath  '{local_file_path.name}' --start-date '{start_date}' --end-date '{end_date}' "
+        f"--pollen-column '{pollen_column}' --delimiter '{input_file_delimiter}'",
         detach=True,
         tty=True,
     )
@@ -80,17 +77,28 @@ def execute(pcs: Process, outfile_name: str, attribute_list: List[str]):
     container.remove(v=True)
 
     # Outputs
-    out_csv = Path(pcs.storage.local_dir, outfile_name + ".csv")
+    out_csv = Path(pcs.storage.local_dir, "split_dataset.csv")
     # send time to remote storage
     if not out_csv.is_file():
         raise FileNotFoundError(f"{out_csv} is missing")
 
-    dfs_dir = pcs.storage.put_file(out_csv)
+    dfs_dir_csv = pcs.storage.put_file(out_csv)
 
     # send to downstream
     output_csv = SimpleTabularDataset(
-        resource=dfs_dir, delimiter=input_file_delimiter, file_format=".csv"
+        resource=dfs_dir_csv, delimiter=input_file_delimiter
     )
     pcs.to_downstream(output_csv)
 
-    return TaskResult(files=[dfs_dir])
+    out_pdf = Path(pcs.storage.local_dir, "seasonal_plot.pdf")
+    # send time to remote storage
+    if not out_pdf.is_file():
+        raise FileNotFoundError(f"{out_pdf} is missing")
+
+    dfs_dir_pdf = pcs.storage.put_file(out_pdf)
+
+    # send to downstream
+    output_pdf = Pdf(resource=dfs_dir_pdf)
+    pcs.to_downstream(output_pdf)
+
+    return TaskResult(files=[dfs_dir_csv, dfs_dir_pdf])
