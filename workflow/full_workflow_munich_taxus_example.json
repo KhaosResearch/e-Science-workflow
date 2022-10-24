@@ -1398,7 +1398,7 @@
       },
       "parameters": [],
       "ontology_mapping": {},
-      "left": 1060,
+      "left": 1080,
       "top": 260
     },
     "17": {
@@ -1494,7 +1494,7 @@
         }
       ],
       "ontology_mapping": {},
-      "left": 1200,
+      "left": 1220,
       "top": 260
     },
     "18": {
@@ -2503,6 +2503,119 @@
       "ontology_mapping": {},
       "left": 540,
       "top": 620
+    },
+    "31": {
+      "properties": {
+        "name": "ComponentSeasonality1",
+        "label": "Seasonality",
+        "module": [
+          {
+            "language": "Python",
+            "module": "drama_enbic2lab.catalog.air.ComponentARIMA"
+          }
+        ],
+        "inputs": {
+          "0": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          }
+        },
+        "outputs": {
+          "output_0": {
+            "properties": {
+              "name": "Png",
+              "label": "PNG"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/Png",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Image"
+            }
+          },
+          "output_1": {
+            "properties": {
+              "name": "SimpleTabularDataset",
+              "label": "CSV"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/TabularDataSet"
+            }
+          },
+          "output_2": {
+            "properties": {
+              "name": "FilePdf",
+              "label": "PDF"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Pdf"
+            }
+          },
+          "output_3": {
+            "properties": {
+              "name": "FilePdfSeasonality",
+              "label": "PDF"
+            },
+            "definition": {
+              "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSeasonality",
+              "type": "http://www.ontologies.khaos.uma.es/bigowl/Pdf"
+            }
+          }
+        },
+        "description": "Generate differents plots based on Dickey Fuller and ARIMA methods",
+        "numberofinputs": 1,
+        "numberofoutputs": 4
+      },
+      "definition": {
+        "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSeasonality"
+      },
+      "parameters": [
+        {
+          "properties": {
+            "name": "pollen",
+            "label": "Pollen",
+            "value": "Taxus",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterPollen",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        },
+        {
+          "properties": {
+            "name": "year",
+            "label": "Year",
+            "value": "2013",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterYear",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/Integer"
+          }
+        },
+        {
+          "properties": {
+            "name": "date_column",
+            "label": "Date Column",
+            "value": "fecha",
+            "defaultValue": null
+          },
+          "definition": {
+            "uri": "http://www.ontologies.khaos.uma.es/enbic2lab/ParameterDateColumn",
+            "type": "http://www.ontologies.khaos.uma.es/bigowl/String"
+          }
+        }
+      ],
+      "ontology_mapping": {},
+      "left": 1020,
+      "top": 600
     }
   },
   "links": {
@@ -2839,6 +2952,14 @@
       "fromConnector": "output_0",
       "fromSubConnector": 0,
       "toOperator": "29",
+      "toConnector": "0",
+      "toSubConnector": 0
+    },
+    "42": {
+      "fromOperator": "18",
+      "fromConnector": "output_0",
+      "fromSubConnector": 0,
+      "toOperator": 31,
       "toConnector": "0",
       "toSubConnector": 0
     }
