@@ -9,8 +9,14 @@ Consequently, in this paper, we provide a semantic-enhanced e-Science workflow b
 
 Two case studies of pollen prediction were developed to test the implementation of the aforementioned methodologies. Both were elaborated with airborne pollen data obtained in the city of Málaga (Spain). Still, one was elaborated for _Platanus_ pollen type (narrow annual main pollination period), while the other was done for Amaranthaceae pollen type (extensive annual main pollination period). The predictions have been conducted using machine and deep learning algorithms like SARIMA or CNN-LSTM that intend to optimise the pollen prediction procedure depending on its stational and seasonal profile.
 
-## TITAN platform
+### Pollen Forecasting Generic Workflow
+![class image](supplementary-material/General_workflow.PNG "Pollen forecasting generic workflow")
+
+### Time Series Forecasting Workflow
+![class image](supplementary-material/Prediction_workflow.PNG "Time Series Forecasting Workflow")
+
+#### TITAN platform
 https://enbic2lab.uma.es/titan/
 
-## BIGOWL Ontology
+#### BIGOWL Ontology
 https://github.com/KhaosResearch/TITAN-owl
