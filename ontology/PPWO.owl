@@ -1461,6 +1461,8 @@
 
 
 
+    <!-- http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaEvaluation -->
+    
     <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/enbic2lab/ComponentSarimaEvaluation">
         <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataAnalysing"/>
         <bigowl:hasAlgorithm rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/AlgorithmSarimaEvaluation"/>
@@ -1548,8 +1550,8 @@
         <bigowl:hasParameter rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/ParameterYear"/>
         <bigowl:specifiesInputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
         <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdf"/>
-        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSarimax"/>
         <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/FilePdfSeasonality"/>
+        <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/Png"/>
         <bigowl:specifiesOutputClass rdf:resource="http://www.ontologies.khaos.uma.es/enbic2lab/SimpleTabularDataset"/>
         <bigowl:numberOfInputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl:numberOfInputs>
         <bigowl:numberOfOutputs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</bigowl:numberOfOutputs>
